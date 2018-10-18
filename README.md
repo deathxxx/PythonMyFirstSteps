@@ -1,23 +1,27 @@
 # PythonMyFirstSteps
 
-Quick setup — if you’ve done this kind of thing before
-or
+Проект тестовый для извения Python (Для Ильдуса)
 
-We recommend every repository include a README, LICENSE, and .gitignore.
-…or create a new repository on the command line
+работает на python2.7
 
-echo "# PythonMyFirstSteps" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/deathxxx/PythonMyFirstSteps.git
-git push -u origin master
+нужно установить библиотеку
+sudo apt-get update
+sudo apt-get install python-qrtools
 
-…or push an existing repository from the command line
+при работе с библиотекой могут возникнуть проблемы
+    Traceback (most recent call last):
+      File "qrtoolsT2.py", line 7, in <module>
+        my_QR.decode()
+      File "/usr/lib/python2.7/dist-packages/qrtools.py", line 181, in decode
+        raw = pil.tostring()
+      File "/usr/lib/python2.7/dist-packages/PIL/Image.py", line 695, in tostring
+        "Please call tobytes() instead.")
+    Exception: tostring() has been removed. Please call tobytes() instead.
+ну соответсвенно в данной ситуации я подредактировал файл /usr/lib/python2.7/dist-packages/qrtools.py на линии 181 tostring() на tobytes()
 
-git remote add origin https://github.com/deathxxx/PythonMyFirstSteps.git
-git push -u origin master
-
-…or import code from another repository
-
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+# qrtoolsT1.py
+создает кр код и помещает в текущую папку.
+# qrtoolsT2.py
+считывает кр код и показывает раскодированный текст.
+# qrtoolsT3.py
+создает кр код с большим разрешение и помещает в текущую папку.
