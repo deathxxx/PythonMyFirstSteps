@@ -10,6 +10,7 @@ sudo apt-get install python-qrtools
 
 при работе с библиотекой могут возникнуть проблемы
 
+```
     Traceback (most recent call last):
       File "qrtoolsT2.py", line 7, in <module>
         my_QR.decode()
@@ -18,6 +19,7 @@ sudo apt-get install python-qrtools
       File "/usr/lib/python2.7/dist-packages/PIL/Image.py", line 695, in tostring
         "Please call tobytes() instead.")
     Exception: tostring() has been removed. Please call tobytes() instead.
+```
 
 ну соответсвенно в данной ситуации я подредактировал файл /usr/lib/python2.7/dist-packages/qrtools.py на линии 181 tostring() на tobytes()
 
