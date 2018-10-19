@@ -29,3 +29,6 @@ sudo apt-get install python-qrtools
 считывает кр код и показывает раскодированный текст.
 # qrtoolsT3.py
 создает кр код с большим разрешение и помещает в текущую папку.
+
+
+https://www.geeksforgeeks.org/reading-generating-qr-codes-python-using-qrtools/
